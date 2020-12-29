@@ -24,8 +24,10 @@ def mrMailer(smtp_server, smtp_port, fileToAttach):
         # checking whether this file has an extension or not
 
         if "." in zipfilename:
-
-            zipfilename = fileToAttach.split(".")[0]
+            # filter the input filename by relative path
+            temp = sorted(([i for i in range(len(zipfilename)) if zipfilename[i] == '.']))[-1]
+          
+            zipfilename = zipfilename[:temp]
 
         else:
             # or you can do nothing as out file name already stored in zipfilename
