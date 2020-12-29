@@ -9,7 +9,7 @@
 
 
 # mrMailer
-This repository is for sending email using python language.
+mrMailer is a simple bot for sending email with zipped file attachments using python language.
 
 Simple code for sending mail.
 
